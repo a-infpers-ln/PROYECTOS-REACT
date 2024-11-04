@@ -16,3 +16,5 @@ export type CartItem2 = Omit<Guitar, 'id' | 'name' | 'price' > &{
     quantity: number
 }
 
+export type GuitarID = Guitar['id']
+
