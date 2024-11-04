@@ -5,3 +5,9 @@ export type Guitar = {
     description: string
     price: number
 }
+
+//export type CartItem = Guitar &{
+export interface CartItem extends Guitar {
+
+    quantity: number
+}
