@@ -6,8 +6,13 @@ export type Guitar = {
     price: number
 }
 
-//export type CartItem = Guitar &{
-export interface CartItem extends Guitar {
-
+//Add attributes
+export type CartItem = Pick<Guitar, 'id' | 'name' | 'price' > &{
     quantity: number
 }
+
+//Remove  attributes 
+export type CartItem2 = Omit<Guitar, 'id' | 'name' | 'price' > &{
+    quantity: number
+}
+
