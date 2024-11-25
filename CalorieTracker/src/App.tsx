@@ -2,7 +2,7 @@ function App() {
 
   return (
     <>
-      <h1>Contador css</h1>
+      <h1 className="text-6xl">Contador css</h1>
     </>
   )
 }
