@@ -22,4 +22,6 @@ export const activityReducer = (
         // Este codigo maneja la logica para actualizar el state
         
     }
+
+    return state
 }
