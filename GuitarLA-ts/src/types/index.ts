@@ -6,15 +6,14 @@ export type Guitar = {
     price: number
 }
 
-//Add attributes
-export type CartItem = Pick<Guitar, 'id' | 'name' | 'price' | 'image' > &{
+export type CartItem = Guitar & {
     quantity: number
 }
 
-//Remove  attributes 
-export type CartItem2 = Omit<Guitar, 'id' | 'name' | 'price' > &{
-    quantity: number
-}
-
-export type GuitarID = Guitar['id']
+// export type CartItem = Pick<Guitar, 'id' | 'name' | 'price' > & {
+//     quantity: number
+// }
+// export type CartItem = Omit<Guitar, 'id' | 'name' | 'price' > & {
+//     quantity: number
+// }
 

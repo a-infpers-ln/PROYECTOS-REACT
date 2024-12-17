@@ -1,4 +1,12 @@
-import type { Guitar } from '../types'
+
+//type Guitar = {
+interface Guitar {
+    id: number
+    name: string
+    image: string
+    description: string
+    price: number
+}
 
 export const db : Guitar[] = [
     {
@@ -6,7 +14,7 @@ export const db : Guitar[] = [
         name: 'Lukather',
         image: 'guitarra_01',
         description: 'Morbi ornare augue nisl, vel elementum dui mollis vel. Curabitur non ex id eros fermentum hendrerit.',
-        price: 299
+        price: 299,
     },
     {
         id: 2,
