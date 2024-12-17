@@ -7,11 +7,10 @@ type HeaderProps = {
 
     cart: CartItem[]
     dispatch: Dispatch<CartActions>
-    clearCart: () => void
 
 }
 
-export default function Header({cart, dispatch, clearCart} : HeaderProps) {
+export default function Header({cart, dispatch} : HeaderProps) {
 
     // State Derivado
     const isEmpty = useMemo( () => cart.length === 0, [cart])
@@ -98,7 +97,7 @@ export default function Header({cart, dispatch, clearCart} : HeaderProps) {
 
                                 <button 
                                     className="btn btn-dark w-100 mt-3 p-2"
-                                    onClick={clearCart}
+                                    onClick={() => dispatch({type: 'clear-cart'})}
                                 >Vaciar Carrito</button>
                             </div>
                         </div>
