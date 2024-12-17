@@ -18,7 +18,6 @@ export const initialState : CartState = {
     cart: []
 }
 
-const MIN_ITEMS = 1
 const MAX_ITEMS = 5
 
 export const cartReducer = (
