@@ -1,20 +1,24 @@
 import { Fragment } from 'react'
 import { PlusCircleIcon } from '@heroicons/react/24/solid'
 import { Dialog, Transition } from '@headlessui/react'
+import { useBudget } from '../hooks/useBudget'
 
 export default function ExpenseModal() {
+
+    const { state, dispatch} = useBudget()
 
   return (
     <>
       <div className="fixed right-5 bottom-5 flex items-center justify-center">
         <button
           type="button"
+          onClick={() => dispatch({type: 'show-modal'})}
         >
           <PlusCircleIcon className='w-16 h-16 text-blue-600 rounded-full' />
         </button>
       </div>
 
-      <Transition appear show={false} as={Fragment}>
+      <Transition appear show={state.modal} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={() => {}}>
           <Transition.Child
             as={Fragment}
