@@ -6,7 +6,6 @@ import { usePatientStore } from '../store'
 export default function PatientForm() {
 
     const { addPatient } = usePatientStore()
-    const activeId = usePatientStore(state => state.activeId)
     const { register, handleSubmit, formState: {errors}, reset } = useForm<DraftPatient>()
 
     const registerPatient = (data: DraftPatient) => {
@@ -16,7 +15,7 @@ export default function PatientForm() {
   
     return (
       <div className="md:w-1/2 lg:w-2/5 mx-5">
-          <h2 className="font-black text-3xl text-center">Seguimiento Pacientes {activeId}</h2>
+          <h2 className="font-black text-3xl text-center">Seguimiento Pacientes</h2>
   
           <p className="text-lg mt-5 text-center mb-10">
               Añade Pacientes y {''}
