@@ -6,7 +6,7 @@
 }
 
 .form input[type="text"],
-.form select{
+.form select {
     padding: 1rem;
     background-color: transparent;
     border: .3rem solid var(--white);
