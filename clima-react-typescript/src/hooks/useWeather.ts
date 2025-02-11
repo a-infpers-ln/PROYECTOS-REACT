@@ -2,7 +2,7 @@ import axios from "axios"
 import {z} from 'zod'
 //import {object, string, number, InferOutput, parse} from 'valibot'
 import { SearchType } from "../types"
-import { useState } from "react"
+import { useMemo, useState } from "react"
 
 //TYPE GUARD O ASSERTION
 /*function isWeatherResponse(weather : unknown) : weather is Weather{
@@ -102,11 +102,13 @@ export default function useWeather() {
         } catch (error) {
             console.log(error)
         }
-
     }
+
+    const hasWeatherData = useMemo(() => weather.name, [weather])
 
     return {
         weather,
-        fetchWeather
+        fetchWeather,
+        hasWeatherData
     }
 }
