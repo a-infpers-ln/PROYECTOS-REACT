@@ -1,5 +1,5 @@
 import axios from "axios"
-import { SearchType } from "../types"
+import { SearchType, Weather } from "../types"
 
 export default function useWeather() {
     const fetchWeather = async (search: SearchType) => {
@@ -16,7 +16,7 @@ export default function useWeather() {
 
             const wetherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${appId}`
 
-            const { data: weatherResult } = await axios(wetherUrl)
+            const { data: weatherResult } = await axios<Weather>(wetherUrl)
             
         } catch (error) {
             console.log(error)
