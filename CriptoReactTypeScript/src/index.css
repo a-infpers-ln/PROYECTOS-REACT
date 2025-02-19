@@ -1,0 +1,40 @@
+:root {
+  --white: #FFF;
+  --primary: #61ECBC;
+  --black: #182339;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-image: url('/bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  font-family: 'Outfit', sans-serif;
+  font-size: 2rem;
+}
+.container {
+  max-width: 60rem;
+  width: 95%;
+  margin: 0 auto;
+}
+.app-title {
+  font-size: 3.8rem;
+  margin-top: 5rem;
+  color: var(--white);
+  line-height: .8;
+}
+.app-title span {
+  display: block;
+  color: var(--primary);
+  font-size: 4.4rem;
+}
+.content {
+  margin-top: 5rem;
+  padding: 6rem 2rem;
+  background-color: var(--white);
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
