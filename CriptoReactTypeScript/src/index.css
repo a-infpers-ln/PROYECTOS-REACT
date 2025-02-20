@@ -38,6 +38,7 @@ body {
   border-radius: 1rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
+
 .form,
 .field {
   display: flex;
@@ -67,4 +68,27 @@ body {
 }
 .form [type="submit"]:hover {
   background-color: #0CB387;
+}
+
+.result-wrapper {
+  margin-top: 5rem;
+}
+.result-wrapper h2 {
+  text-align: center;
+}
+.result {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+  gap: 1rem;
+}
+.result img {
+  width: 100%;
+}
+.result p {
+  margin: 0 0 1rem;
+  font-size: 1.6rem;
+}
+.result span {
+  font-weight: 700;
 }
