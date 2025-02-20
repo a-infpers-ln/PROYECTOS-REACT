@@ -69,7 +69,7 @@ export default function CriptoSearchForm() {
                 value={pair.criptocurrency}
             >
                 <option value="">-- Seleccione --</option>
-                {(cryptocurrencies ?? []).map((crypto) => (
+                {cryptocurrencies.map((crypto) => (
                   <option 
                     key={crypto.CoinInfo.FullName} 
                     value={crypto.CoinInfo.Name}
