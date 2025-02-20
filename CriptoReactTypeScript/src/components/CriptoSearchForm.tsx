@@ -1,4 +1,4 @@
-import React from 'react'
+import { currencies } from "../data"
 
 export default function CriptoSearchForm() {
   return (
@@ -12,6 +12,9 @@ export default function CriptoSearchForm() {
                 id="currency"
             >
                 <option value="">-- Seleccione --</option>
+                {currencies.map(currency => (
+                  <option key={currency.code} value={currency.code}>{currency.name}</option>
+                ))}
             </select>
         </div>
 
