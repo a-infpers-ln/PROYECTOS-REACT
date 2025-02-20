@@ -13,5 +13,7 @@ export async function getCryptos() {
 }
 
 export async function fetchCurrentCryptoPrice(pair: Pair) {
+    const url = `https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${pair.criptocurrency}&tsyms=${pair.currency}`
+    const { data: { DISPLAY } } = await axios(url)
    
 }
