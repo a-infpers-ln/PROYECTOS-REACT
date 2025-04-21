@@ -3,18 +3,19 @@ import { CategoriesAPIResponseSchema, DrinksAPIResponse } from "../utils/recipes
 import { SearchFilter } from "../types";
 
 export async function getCategories() {
-    const url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list'
-    const {data} = await axios(url)
-    const result = CategoriesAPIResponseSchema.safeParse(data)
-    if(result.success) {
-        return result.data
+    const url = '/api/api/json/v1/1/list.php?c=list'; // <- usando el proxy
+    const { data } = await axios(url);
+    const result = CategoriesAPIResponseSchema.safeParse(data);
+    if (result.success) {
+        return result.data;
     }
 }
+
 export async function getRecipes(filters: SearchFilter) {
-    const url = `http://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${filters.category}&${filters.ingredient}`
-    const {data} = await axios(url)
-    const result = DrinksAPIResponse.safeParse(data)
-    if(result.success) {
-        return result.data
+    const url = `/api/api/json/v1/1/filter.php?c=${filters.category}&${filters.ingredient}`; // <- usando el proxy
+    const { data } = await axios(url);
+    const result = DrinksAPIResponse.safeParse(data);
+    if (result.success) {
+        return result.data;
     }
 }
