@@ -19,7 +19,7 @@ export default function Header() {
 
   useEffect(() => {
     fetchCategories()
-  })
+  }, [])
 
   const handleChange = (e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLSelectElement>) => {
     setSearchFilters({
@@ -67,6 +67,7 @@ export default function Header() {
             {isHome && (
               <form
                 className='md:w-1/2 2xl:w-1/3 bg-orange-400 my-32 p-10 rounded-lg shadow space-y-6'
+                onSubmit={handleSubmit}
               >
                 <div className='space-y-4'>
                   <label
