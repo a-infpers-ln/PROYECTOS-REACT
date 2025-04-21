@@ -9,6 +9,8 @@ export default function Header() {
   const isHome = useMemo(() => pathname === '/' , [pathname])
 
   const fetchCategories = useAppStore((state) => state.fetchCategories)
+  const categories = useAppStore((state) => state.fetchCategories)
+
 
   useEffect(() => {
     fetchCategories()
