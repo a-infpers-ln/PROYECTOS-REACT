@@ -8,7 +8,7 @@ export default function IndexPage() {
     const hasDrinks = useMemo(() => drinks.drinks.length, [drinks])
 
     return (
-      <>
+      <div>
         <h1 className="text-6xl font-extrabold">Recetas</h1>
 
         {hasDrinks ? (
@@ -25,6 +25,6 @@ export default function IndexPage() {
               No  hay resultados aún, utiliza el formulario para buscar recetas
           </p>
         )}
-      </>
+      </div>
     )
 }
