@@ -1,4 +1,5 @@
 import {StateCreator} from 'zustand'
+import AIService from '../services/AIService'
 
 export type AISlice = {
     recipe: string
@@ -8,6 +9,6 @@ export type AISlice = {
 export const createAISlice : StateCreator<AISlice, [], [], AISlice> = () => ({
     recipe: '',
     generateRecipe: async (prompt) => {
-        
+        await AIService.generateRecipe(prompt)
     }
 })
